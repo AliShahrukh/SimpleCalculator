@@ -39,4 +39,22 @@ public class SimpleCalculatorTest {
         String num = "1,2,3,4";
         assertEquals(10, calcAdd.add(num));
     }
+
+    @Test
+    public void addNumWithNewLine(){
+        String num = "1,2\n3";
+        assertEquals(6, calcAdd.add(num));
+    }
+
+    @Test
+    public void addNumWithNewLine2(){
+        String num = "1\n2\n3";
+        assertEquals(6, calcAdd.add(num));
+    }
+
+    @Test
+    public void addNumWithNewLine3(){
+        String num = "1\n2,3";
+        assertEquals(6, calcAdd.add(num));
+    }
 }
