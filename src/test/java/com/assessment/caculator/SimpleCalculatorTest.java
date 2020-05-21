@@ -10,7 +10,7 @@ public class SimpleCalculatorTest {
     SimpleCalculator calcAdd = null;
 
     @Before
-    public void setup() throws Exception{
+    public void setup(){
         calcAdd = new SimpleCalculator();
     }
 
@@ -21,4 +21,17 @@ public class SimpleCalculatorTest {
 
         assertEquals(0, calcAdd.add(num));
     }
+
+    @Test
+    public void addOneNumber(){
+        String num = "1";
+        assertEquals(1, calcAdd.add(num));
+    }
+
+    @Test
+    public void addTwoNumbers(){
+        String num = "1,2";
+        assertEquals(3, calcAdd.add(num));
+    }
+
 }
