@@ -57,4 +57,16 @@ public class SimpleCalculatorTest {
         String num = "1\n2,3";
         assertEquals(6, calcAdd.add(num));
     }
+
+    @Test
+    public void addNumWithDelimiters() {
+        String num = "//;\n1;2";
+        assertEquals(3, calcAdd.add(num));
+    }
+
+    @Test
+    public void addNumWithDelimiters2() {
+        String num = "%%\n1;2";
+        assertEquals(3, calcAdd.add(num));
+    }
 }

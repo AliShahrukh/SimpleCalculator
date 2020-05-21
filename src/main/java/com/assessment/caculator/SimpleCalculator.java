@@ -11,7 +11,8 @@ public class SimpleCalculator {
             return sum;
         } else
         {
-            int[] numbers = Arrays.stream(number.split(",|\\n")).mapToInt(Integer::parseInt).toArray();
+            number = number.replaceAll("[^-?0-9]+", " ");
+            int[] numbers = Arrays.asList(number.trim().split(" ")).stream().mapToInt(Integer::parseInt).toArray();
             
             for(int n : numbers){
                 
