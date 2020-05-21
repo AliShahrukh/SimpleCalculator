@@ -29,9 +29,14 @@ public class SimpleCalculatorTest {
     }
 
     @Test
-    public void addTwoNumbers(){
+    public void addTwoNumbers() {
         String num = "1,2";
         assertEquals(3, calcAdd.add(num));
     }
 
+    @Test
+    public void addMultipleNumbers() {
+        String num = "1,2,3,4";
+        assertEquals(10, calcAdd.add(num));
+    }
 }
